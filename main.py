@@ -28,9 +28,27 @@ def getMarkdown(data):
         'descriptionTitle': '## Description \n',
         'description': f'{data['description']} \n',
         'installationTitle': '## Installation \n',
-        'installationInstruction': f'1. Clone this repository: \n ```bash \n git clone {data['repository_link']} \n cd {data['repository_folder']} \n 2. Create a virtual environment: \n python -m venv venv \n 3. Activate the virtual environment: \n * Windows \n venv\Scripts\\activate \n * macOS / Linux \n source venv/bin/activate \n 4. Install dependencies: \n pip install -r requirements.txt \n ``` \n',
+        'installationInstruction':(
+            '1. Clone this repository: \n'
+            '```bash \n git clone'
+            f'{data['repository_link']} \n'
+            f'cd {data['repository_folder']} \n'
+            '2. Create a virtual environment: \n'
+            'python -m venv venv \n'
+            '3. Activate the virtual environment: \n'
+            '- **Windows** \n'
+            'venv\Scripts\\activate \n'
+            '- **macOS / Linux** \n'
+            'source venv/bin/activate \n'
+            '4. Install dependencies: \n'
+            'pip install -r requirements.txt \n'
+            '``` \n'),
         'usageTitle': '## Usage \n',
-        'usageInstruction': '1. Run the script: \n python main.py \n2. Answer the interactive questions in the terminal \n3. The program will generate a README.md file in the project directory based on your answers \n4. Open the generated file in VS Code or preview it on GitHub to see the final result.'
+        'usageInstruction': ('1. Run the script: \n'
+            'python main.py\n'
+            '2. Answer the interactive questions in the terminal \n'
+            '3. The program will generate a README.md file in the project directory based on your answers \n'
+            '4. Open the generated file in VS Code or preview it on GitHub to see the final result.')
         }
     return template
     
