@@ -1,7 +1,7 @@
-from rich.console import Console
-from rich.table import Table
-from rich import print
-from rich.style import Style
+# from rich.console import Console
+# from rich.table import Table
+# from rich import print
+# from rich.style import Style
 # from pathlib import Path
 
 # from rich.console import Console
@@ -29,9 +29,9 @@ default (resets to terminal default)	on default
 
 '''
 
-basicStyle = Style(color="blue", bold=False, italic=True)
+# basicStyle = Style(color="blue", bold=False, italic=True)
 
-data = {}
+# data = {}
 # print(f"[italic {basicStyle}]JEW JEW JEW[/italic {basicStyle}] World!")
 
 # data['title'] =  input('Heading title: '),
@@ -46,19 +46,19 @@ data = {}
 
 # print(dataTwo['title'])
 
-def getUserInputs():
-    data = {}
-    data['title'] =  input('Heading title: ')
-    data['description'] = input('Description: ')
-    data['heading'] = input('heading: ')
-    data['content'] = input('content: ')
-    return data
+# def getUserInputs():
+#     data = {}
+#     data['title'] =  input('Heading title: ')
+#     data['description'] = input('Description: ')
+#     data['heading'] = input('heading: ')
+#     data['content'] = input('content: ')
+#     return data
 
-def genMarkdown(data):
+# def genMarkdown(data):
    # HERE DO WITH OPEN
-   with open('readme.md', 'w') as f:
-       # new line i 
-       f.write(f'# {data['title']} \n## {data['description']}\n## {data['heading']}\n## {data['content']}')
+#    with open('readme.md', 'w') as f:
+#        # new line i 
+#        f.write(f'# {data['title']} \n## {data['description']}\n## {data['heading']}\n## {data['content']}')
     # print(data['title']) run it
     # print(data['description'])
     # print(data['heading'])
@@ -66,13 +66,13 @@ def genMarkdown(data):
 # does it print title? yes and one letter agaoin :)
 
 # find more templates also make another function that creates basic readme.md without user input
-TEMPLATES = {
-    "Basic README": "# Project Title\n\n## Description\n\n## Installation\n\n## Usage\n\n## License\n",}
+# TEMPLATES = {
+    # "Basic README": "# Project Title\n\n## Description\n\n## Installation\n\n## Usage\n\n## License\n",}
 
 
 # btw that was the easy part :) now you have to do use github format to style the readme
 # now instead of printing it should be writing? why are you using two function? 
-genMarkdown(getUserInputs())
+# genMarkdown(getUserInputs())
 
     
 # but how will i get the data? store it globaly when u return it will become global i beleive , try it out real quick? re run
@@ -88,29 +88,44 @@ genMarkdown(getUserInputs())
 #     print(f'[italic {basicStyle}]file created [/italic {basicStyle}]')
 
 # create_file(userInputs)
-'''
+# '''
 
-1. get user input for what the heading will be called?
+# 1. get user input for what the heading will be called?
 
-2. short project des
+# 2. short project des
 
-YOU GONNA NEED TWO function 
+# YOU GONNA NEED TWO function 
 
-userInput():
-    this should get the following heading, title , description,content?
-
-
-can i store it in dict?
-yes but show me example of dict?
-+ 
+# userInput():
+#     this should get the following heading, title , description,content?
 
 
-genMarkdown()
+# can i store it in dict?
+# yes but show me example of dict?
+# + 
 
 
-'''
-# create_file()
-# def fancyFile(file):
+# genMarkdown()
+# def getUserInputs():
+#     data = {}
     
-#     file = str(f'')
+#     data['main_title'] = input('Title of the project: ')
+#     data['main_subtitle'] = input('Subtitle of the project or short description: ')
+#     return data
 
+# def getMarkdown(data):
+#     template = {
+#         'title': f'# {data['main_title']} \n',
+#         'subtitle': f'## {data['main_subtitle']} \n',
+#         'descriptionTitle': '## Description \n',
+#     }
+#     return template
+
+
+# with open('readme.md', 'w') as file:
+#     template = getMarkdown(getUserInputs())
+#     content = '\n'.join(f'{value}' for key, value in template.items())
+#     # listStr = template.values()
+#     # spltedList = listStr.split(', ')
+#     print(content)
+#     file.write(content)
