@@ -1,6 +1,6 @@
 from urllib.parse import urlparse
 from pathlib import Path
-# from PyInquirer import prompt
+from InquirerPy import prompt
 from rich.console import Console
 from rich.syntax import Syntax
 import json
@@ -11,11 +11,10 @@ from rich.text import Text
 from rich.markdown import Markdown
 
 console = Console()
-with open("readme.md") as readme:
+with open("readme.md", 'r') as readme:
     markdown = Markdown(readme.read())
 console.print(markdown)
 
-# console = Console()
 
 text = Text('Python README Generator', style='bold blue')
 padded_text = Padding(text, (1, 22))
@@ -25,7 +24,7 @@ console.print('\n')
 console.rule(f'[bold blue]Python README Generator[/bold blue]')
 console.print('\n')
 
-name = Prompt.ask("[magenta]Enter your name[/magenta]")
+# name = Prompt.ask("[magenta]Enter your name[/magenta]")
 
 
 # with open('readme.md', 'r') as f:
@@ -34,21 +33,24 @@ name = Prompt.ask("[magenta]Enter your name[/magenta]")
     # print(data)
     # console.print(f'[bold yellow]{data}[/bold yellow]')
 
-# questions = [
-#         {
-#             'type': 'input',
-#             'name': 'main_title',
-#             'message': 'Title of the project: '
-#         },
-#         {
-#             'type': 'list',
-#             'name': 'license',
-#             'message': 'Choose a license: ',
-#             'choices': ['MIT', 'GPL', 'BSD']
-#         }
-#     ]
-# answers = prompt(questions)
-# print(answers)
+questions = [
+        {
+            'type': 'input',
+            'name': 'main_title',
+            'message': 'Title of the project: '
+        },
+        {
+            'type': 'list',
+            'name': 'license',
+            'message': 'Choose a license: ',
+            'choices': ['MIT', 'GPL', 'BSD']
+        }
+    ]
+answers = prompt(questions)
+print(answers)
+
+with open('test.md', 'w') as f:
+    f.write(answers['main_title'])
 # get user inputs 
 # def getUserInputs():
 #     data = {}
