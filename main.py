@@ -8,7 +8,14 @@ from rich.prompt import Prompt
 from rich.padding import Padding
 from rich.text import Text
 
+from rich.markdown import Markdown
+
 console = Console()
+with open("readme.md") as readme:
+    markdown = Markdown(readme.read())
+console.print(markdown)
+
+# console = Console()
 
 text = Text('Python README Generator', style='bold blue')
 padded_text = Padding(text, (1, 22))
