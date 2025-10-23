@@ -30,17 +30,26 @@ def getMarkdown(data):
         'installationTitle': '## Installation \n',
         'installationInstruction':(
             '1. Clone this repository: \n'
-            '```bash \n git clone'
-            f'{data['repository_link']} \n'
+            f'```bash \n git clone {data['repository_link']} \n'
+            '``` \n'
+            '```bash \n '
             f'cd {data['repository_folder']} \n'
+            '``` \n'
             '2. Create a virtual environment: \n'
+            '```bash \n '
             'python -m venv venv \n'
+            '``` \n'
             '3. Activate the virtual environment: \n'
             '- **Windows** \n'
+            '```bash \n '
             'venv\Scripts\\activate \n'
+            '``` \n'
             '- **macOS / Linux** \n'
+            '```bash \n '
             'source venv/bin/activate \n'
+            '``` \n'
             '4. Install dependencies: \n'
+            '```bash \n '
             'pip install -r requirements.txt \n'
             '``` \n'),
         'usageTitle': '## Usage \n',
