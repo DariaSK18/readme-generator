@@ -129,3 +129,59 @@ default (resets to terminal default)	on default
 #     # spltedList = listStr.split(', ')
 #     print(content)
 #     file.write(content)
+
+# getUserInputs()
+# with open('test.md', 'w') as f:
+#     f.write(answers['main_title'])
+# get user inputs 
+# def getUserInputs():
+#     data = {}
+    
+#     data['main_title'] = input('[magenta bold]Title of the project: [/magenta bold]')
+#     data['main_subtitle'] = input('Subtitle of the project or short description: ')
+#     data['description'] = input('Description of the project: ')
+#     data['repository_link'] = input('Repository link: ')
+    # data['link'] = input('Link to live demo: ')
+    # url = data['repository_link']
+    # folder = Path(url).name
+    # data['repository_folder'] = folder
+    # path = urlparse(data['repository_link']).path
+    # project = path.split('/')[-1]
+    # data['repository_folder'] = project.replace('.git', '')
+    # print(data['repository_folder'])
+    
+#     return data
+# getUserInputs()
+
+# name = Prompt.ask("[magenta]Enter your name[/magenta]")
+
+
+# with open('readme.md', 'r') as f:
+    # data = json.load(f)
+    # data = f.read()
+    # print(data)
+    # console.print(f'[bold yellow]{data}[/bold yellow]')
+
+
+
+# text = Text('Python README Generator', style='bold blue')
+# padded_text = Padding(text, (1, 22))
+# console.print(padded_text)
+
+# import time
+# from rich.progress import track
+# from rich.console import Console
+# console = Console()
+# def loading_simulation():
+#     console.print("[bold cyan]Processing data...[/bold cyan]")
+#     for _ in track(range(10), description="Processing..."):
+#         time.sleep(0.2)
+        
+# from rich.progress import Progress
+# import time
+
+# with Progress() as progress:
+#     task = progress.add_task("[cyan]Processing...", total=10)
+#     for _ in range(10):
+#         time.sleep(0.1)
+#         progress.update(task, advance=1)
