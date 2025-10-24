@@ -1,8 +1,9 @@
 from urllib.parse import urlparse
 from questionary import prompt, Style
-from rich.console import Console
+# from rich.console import Console
+from console import console
 
-console = Console()
+# console = Console()
 style = Style([
     ('qmark', 'fg:#00FF7F bold'),
     ('question', 'fg:#00BFFF'),
@@ -12,6 +13,7 @@ style = Style([
 ])
 
 def getUserInputs():
+    # console.print("\n[bold red]Cancelled by user.[/bold red]")
     console.print('\n')
     console.rule(f'[bold blue]README Generator[/bold blue]')
     console.print('\n')
