@@ -2,6 +2,7 @@ from inputs import getUserInputs
 from template import getMarkdown
 from output import write_file, load_data, show_file
 from console import console
+# import time
 
 
 def gen_file():
@@ -12,9 +13,12 @@ def gen_file():
     filename = write_file(template)
     show_file(filename)
 
-console.print("[bold red]Cancelled by user.[/bold red]")
+# console.print("[bold red]Cancelled by user.[/bold red]")
 # if __name__ == "__main__":
 try: 
     gen_file()
 except KeyboardInterrupt:
+    # time.sleep(0.3)
     console.print("[bold red]Cancelled by user.[/bold red]")
+    # import sys
+    # sys.exit(0)
