@@ -1,9 +1,9 @@
 from inputs import getUserInputs
 from template import getMarkdown
-from output import write_file, load_data, show_file
+from output import write_file, load_data, FileViewer
 from console import console
 # import time
-
+# import signal
 
 def gen_file():
     user_inputs = getUserInputs()
@@ -11,14 +11,17 @@ def gen_file():
 
     load_data()
     filename = write_file(template)
-    show_file(filename)
+    viewer = FileViewer(style='markdown')
+    viewer.show_file(filename)
 
-# console.print("[bold red]Cancelled by user.[/bold red]")
-# if __name__ == "__main__":
-try: 
-    gen_file()
-except KeyboardInterrupt:
-    # time.sleep(0.3)
-    console.print("[bold red]Cancelled by user.[/bold red]")
-    # import sys
-    # sys.exit(0)
+# def fail(sig, frame):
+#     console.print("[bold red]Cancelled by user.[/bold red]", flush=True)
+#     exit(0)
+    
+# signal.signal(signal.SIGINT, fail)
+    
+if __name__ == "__main__":
+    try:
+        gen_file()
+    except KeyboardInterrupt:
+        console.print("Cancelled by user.")

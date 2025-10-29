@@ -19,7 +19,12 @@ def load_data():
             time.sleep(0.1)
             progress.update(task, advance=1) 
 
-def show_file(filename):
-    with open(filename, 'r') as f:
-        markdown = Markdown(f.read())
-    console.print(markdown)
+class FileViewer:
+    def __init__(self, style='markdown'):
+        self.console = console
+        self.style = style
+        
+    def show_file(self, filename):
+        with open(filename, 'r') as f:
+            markdown = Markdown(f.read())
+        self.console.print(markdown)
