@@ -1,19 +1,19 @@
-# ыы 
+# Python README File Generator 
 
-ыфвы 
+A simple and reusable Python application that automatically generates a professional `README.md` file for your GitHub projects — based on your input through an interactive command-line interface. 
 
 ## Description 
 
-аыувы 
+This tool helps developers quickly create consistent, professional, and well-structured README files. 
 
 ## Installation 
 
 1. Clone this repository: 
 ```bash 
- git clone вацвыч 
+ git clone https://github.com/DariaSK18/readme-generator.git 
 ``` 
 ```bash 
- cd вацвыч 
+ cd readme-generator 
 ``` 
 2. Create a virtual environment: 
 ```bash 
@@ -47,5 +47,5 @@ This project is licensed under the MIT License — you are free to use, modify, 
 
 ## Author
 
-ввы
-- Contact: [ы](mailto:ы)
+Daria Steblovska
+- Contact: [darias1896.96@gmail.com](mailto:darias1896.96@gmail.com)
